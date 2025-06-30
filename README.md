@@ -154,7 +154,7 @@ This project includes unit tests and integration tests for the API. To run the t
 
 ```bash
 rails test
-
+```
 
 ## License
 
