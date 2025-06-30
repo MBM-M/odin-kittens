@@ -163,4 +163,3 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 - [The Odin Project](https://www.theodinproject.com) for providing the curriculum and learning resources.
 - [Ruby on Rails Guides](https://guides.rubyonrails.org) for their comprehensive documentation.
-" >> README.md
