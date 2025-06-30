@@ -68,7 +68,7 @@ Returns a list of all kittens in the database.
     "image": "http://example.com/mittens.jpg"
   }
 ]
-
+```
 
 ### 2. Get a specific kitten
 **Endpoint:** `GET /kittens/:id`
@@ -83,6 +83,7 @@ Fetches details of a specific kitten by its ID.
   "age": 2,
   "image": "http://example.com/whiskers.jpg"
 }
+```
 
 ### 3. Create a new kitten
 **Endpoint:** `POST /kittens`
@@ -99,7 +100,7 @@ Creates a new kitten. Requires the following parameters in the request body:
   "age": 1,
   "image": "http://example.com/snowball.jpg"
 }
-
+```
 
 **Example Response:**
 ```json
@@ -109,7 +110,7 @@ Creates a new kitten. Requires the following parameters in the request body:
   "age": 1,
   "image": "http://example.com/snowball.jpg"
 }
-
+```
 
 ### 4. Update a kitten's details
 **Endpoint:** `PATCH /kittens/:id`
@@ -123,7 +124,7 @@ Updates an existing kitten's details. You can modify the `name`, `age`, and `ima
   "age": 2,
   "image": "http://example.com/snowball-jr.jpg"
 }
-
+```
 
 **Example Response:**
 ```json
@@ -133,7 +134,7 @@ Updates an existing kitten's details. You can modify the `name`, `age`, and `ima
   "age": 2,
   "image": "http://example.com/snowball-jr.jpg"
 }
-
+```
 
 ### 5. Delete a kitten
 **Endpoint:** `DELETE /kittens/:id`
@@ -145,7 +146,7 @@ Deletes the kitten with the specified ID.
 {
   "message": "Kitten successfully deleted"
 }
-
+```
 
 ## Testing
 
