@@ -1,8 +1,6 @@
-# Create a README file and open it in your text editor
-echo "# Kittens API - Assignment 2" > README.md
 
-# Add project description to the README file
-echo "
+# Kittens API
+
 This project is part of **The Odin Project** and focuses on building a RESTful API in Ruby on Rails that returns information about kittens.
 
 ## Description
@@ -27,38 +25,35 @@ The API allows users to:
 Follow the steps below to get this project up and running on your local machine:
 
 1. **Clone the repository:**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/your-username/kittens-api.git
    cd kittens-api
-   \`\`\`
 
 2. **Install dependencies:**
-   \`\`\`bash
+   ```bash
    bundle install
-   \`\`\`
 
 3. **Set up the database:**
-   \`\`\`bash
+   ```bash
    rails db:create
    rails db:migrate
-   \`\`\`
+
 
 4. **Start the Rails server:**
-   \`\`\`bash
+   ```bash
    rails server
-   \`\`\`
 
-5. Visit \`http://localhost:3000\` in your browser or use Postman/cURL to test the API endpoints.
+5. Visit `http://localhost:3000` in your browser or use Postman/cURL to test the API endpoints.
 
 ## API Endpoints
 
 ### 1. Get all kittens
-**Endpoint:** \`GET /kittens\`
+**Endpoint:** `GET /kittens`
 
 Returns a list of all kittens in the database.
 
 **Example Response:**
-\`\`\`json
+```json
 [
   {
     "id": 1,
@@ -73,93 +68,92 @@ Returns a list of all kittens in the database.
     "image": "http://example.com/mittens.jpg"
   }
 ]
-\`\`\`
+
 
 ### 2. Get a specific kitten
-**Endpoint:** \`GET /kittens/:id\`
+**Endpoint:** `GET /kittens/:id`
 
 Fetches details of a specific kitten by its ID.
 
 **Example Response:**
-\`\`\`json
+```json
 {
   "id": 1,
   "name": "Whiskers",
   "age": 2,
   "image": "http://example.com/whiskers.jpg"
 }
-\`\`\`
 
 ### 3. Create a new kitten
-**Endpoint:** \`POST /kittens\`
+**Endpoint:** `POST /kittens`
 
 Creates a new kitten. Requires the following parameters in the request body:
-- \`name\` (string) - The kitten's name.
-- \`age\` (integer) - The kitten's age.
-- \`image\` (string) - A URL to the kitten's image.
+- `name` (string) - The kitten's name.
+- `age` (integer) - The kitten's age.
+- `image` (string) - A URL to the kitten's image.
 
 **Example Request Body:**
-\`\`\`json
+```json
 {
   "name": "Snowball",
   "age": 1,
   "image": "http://example.com/snowball.jpg"
 }
-\`\`\`
+
 
 **Example Response:**
-\`\`\`json
+```json
 {
   "id": 3,
   "name": "Snowball",
   "age": 1,
   "image": "http://example.com/snowball.jpg"
 }
-\`\`\`
+
 
 ### 4. Update a kitten's details
-**Endpoint:** \`PATCH /kittens/:id\`
+**Endpoint:** `PATCH /kittens/:id`
 
-Updates an existing kitten's details. You can modify the \`name\`, \`age\`, and \`image\` fields.
+Updates an existing kitten's details. You can modify the `name`, `age`, and `image` fields.
 
 **Example Request Body:**
-\`\`\`json
+```json
 {
   "name": "Snowball Jr.",
   "age": 2,
   "image": "http://example.com/snowball-jr.jpg"
 }
-\`\`\`
+
 
 **Example Response:**
-\`\`\`json
+```json
 {
   "id": 3,
   "name": "Snowball Jr.",
   "age": 2,
   "image": "http://example.com/snowball-jr.jpg"
 }
-\`\`\`
+
 
 ### 5. Delete a kitten
-**Endpoint:** \`DELETE /kittens/:id\`
+**Endpoint:** `DELETE /kittens/:id`
 
 Deletes the kitten with the specified ID.
 
 **Example Response:**
-\`\`\`json
+```json
 {
   "message": "Kitten successfully deleted"
 }
-\`\`\`
+
 
 ## Testing
 
 This project includes unit tests and integration tests for the API. To run the tests, use the following command:
 
-\`\`\`bash
+```bash
 rails test
-\`\`\`
+
 
 ## License
 
