@@ -1,0 +1,22 @@
+<h1>Kitten: <%= @kitten.name %></h1>
+<table class="kittens-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Cuteness</th>
+      <th>Softness</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @kitten.name %></td>
+      <td><%= @kitten.age %></td>
+      <td><%= @kitten.cuteness %></td>
+      <td><%= @kitten.softness %></td>
+      <td><%= button_to "Delete kitten", kitten_path(@kitten), method: :delete, data: { turbo_confirm: 'Are you sure?' } %></td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to "All Kittens", kittens_path %>

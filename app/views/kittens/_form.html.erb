@@ -1,0 +1,17 @@
+<!-- views/kitten/_form.html.erb -->
+
+<%= form_with model: @kitten do |form| %>
+  <%= form.label :name, "Name:" %>
+  <%= form.text_field :name %>
+
+  <%= form.label :age, "Age:" %>
+  <%= form.select :age, options_for_select([1,2,3,4,5,6,7,8,9,10], @kitten.age), prompt: "Select Age:" %>
+
+  <%= form.label :cuteness, "Cuteness:" %>
+  <%= form.select :cuteness, options_for_select([1,2,3,4,5,6,7,8,9,10], @kitten.cuteness), prompt: "Select Cuteness:" %>
+
+  <%= form.label :softness, "Softness:" %>
+  <%= form.select :softness, options_for_select([1,2,3,4,5,6,7,8,9,10], @kitten.softness), prompt: "Select Softness:" %>
+
+  <%= form.submit "Submit" %>
+<% end %>

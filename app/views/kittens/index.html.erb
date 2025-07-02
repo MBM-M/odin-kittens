@@ -1,0 +1,28 @@
+<h1>Kittens Index</h1>
+<table class="kittens-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Cuteness</th>
+      <th>Softness</th>
+      <th>Show Page</th>
+      <th>Edit Page</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @kitten.each do |kit| %>
+      <tr>
+        <td><%= kit.name %></td>
+        <td><%= kit.age %></td>
+        <td><%= kit.cuteness %></td>
+        <td><%= kit.softness %></td>
+        <td><%= link_to "#{kit.name} page", kitten_path(kit) %></td>
+        <td><%= link_to "#{kit.name} page", edit_kitten_path(kit) %></td>
+        <td><%= button_to "Delete kitten", kitten_path(kit), method: :delete, data: { turbo_confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to "Add New Kitten", new_kitten_path %>
